@@ -1,0 +1,441 @@
+/* HEX */
+html {
+  --brown: #99621eff;
+  --orange: #d38b5dff;
+  --yellow: #f3ffb6ff;
+  --green: #739e82ff;
+  --deepgreen: #2c5530ff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Mixins */
+/* Global */
+a {
+  text-decoration: none;
+  color: var(--deepgreen);
+}
+
+p {
+  color: var(--deepgreen);
+}
+
+ul {
+  list-style: none;
+}
+
+hr {
+  color: var(--deepgreen);
+  background-color: var(--deepgreen);
+}
+
+body {
+  font-family: helvetica;
+  background-color: var(--yellow);
+  padding: 0;
+  margin: 0;
+}
+
+/* Here's the main grid */
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(60px, 1fr))[6];
+      grid-template-columns: repeat(6, minmax(60px, 1fr));
+  gap: 1rem;
+      grid-template-areas: "header header header header header header"  "archive main  main   main   main   main" "....... main  main   main   main   main"  "footer footer footer footer footer footer";
+}
+
+/* Header */
+.header {
+  color: var(--orange);
+  background-color: var(--deepgreen);
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: header;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "title social" "description social";
+}
+
+.header .title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+  padding-left: 10%;
+  margin: 5%;
+  margin-bottom: 0;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: pacifico;
+  line-height: 1em;
+  color: var(--orange);
+  -webkit-transition-property: color, -webkit-transform;
+  transition-property: color, -webkit-transform;
+  transition-property: color, transform;
+  transition-property: color, transform, -webkit-transform;
+  -webkit-transition-duration: .2s, .2s;
+          transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: ease-out, ease-out;
+          transition-timing-function: ease-out, ease-out;
+}
+
+.header .title:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: var(--brown);
+}
+
+.header .description {
+  font-size: 1rem;
+  font-family: Montserrat;
+  font-weight: 900;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: description;
+  padding: 0 15%;
+  margin-top: 0;
+}
+
+.header .social-media {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: social;
+  background-color: var(--green);
+}
+
+.header .social-media .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: pacifico;
+}
+
+.header .social-media .social #profile {
+  margin-left: 1rem;
+  margin: .1rem;
+  width: 6rem;
+  border-radius: 4em;
+  border: solid var(--deepgreen) 0.3em;
+}
+
+.header .social-media .social .name {
+  font-size: 1.4rem;
+  color: var(--deepgreen);
+  font-weight: 600;
+  margin: 1rem;
+}
+
+.header .social-media .social .person {
+  color: var(--deepgreen);
+  font-family: montserrat;
+  max-width: 200px;
+}
+
+.header .social-media #media ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header .social-media #media ul li {
+  font-size: 3rem;
+  margin: 0 3rem;
+}
+
+a .fa-facebook-square {
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+  -webkit-transition-property: -webkit-filter, -webkit-transform;
+  transition-property: -webkit-filter, -webkit-transform;
+  transition-property: filter, transform;
+  transition-property: filter, transform, -webkit-filter, -webkit-transform;
+  -webkit-transition-duration: .2s, .2s;
+          transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: ease-out, ease-out;
+          transition-timing-function: ease-out, ease-out;
+}
+
+a .fa-facebook-square:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+a .fa-linkedin {
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+  -webkit-transition-property: -webkit-filter, -webkit-transform;
+  transition-property: -webkit-filter, -webkit-transform;
+  transition-property: filter, transform;
+  transition-property: filter, transform, -webkit-filter, -webkit-transform;
+  -webkit-transition-duration: .2s, .2s;
+          transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: ease-out, ease-out;
+          transition-timing-function: ease-out, ease-out;
+}
+
+a .fa-linkedin:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+a .fa-github-square {
+  -webkit-filter: invert(0%);
+          filter: invert(0%);
+  -webkit-transition-property: -webkit-filter, -webkit-transform;
+  transition-property: -webkit-filter, -webkit-transform;
+  transition-property: filter, transform;
+  transition-property: filter, transform, -webkit-filter, -webkit-transform;
+  -webkit-transition-duration: .2s, .2s;
+          transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: ease-out, ease-out;
+          transition-timing-function: ease-out, ease-out;
+}
+
+a .fa-github-square:hover {
+  -webkit-filter: invert(40%);
+          filter: invert(40%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+a .fa-envelope {
+  -webkit-filter: invert(0%);
+          filter: invert(0%);
+  -webkit-transition-property: -webkit-filter, -webkit-transform;
+  transition-property: -webkit-filter, -webkit-transform;
+  transition-property: filter, transform;
+  transition-property: filter, transform, -webkit-filter, -webkit-transform;
+  -webkit-transition-duration: .2s, .2s;
+          transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: ease-out, ease-out;
+          transition-timing-function: ease-out, ease-out;
+}
+
+a .fa-envelope:hover {
+  -webkit-filter: invert(40%);
+          filter: invert(40%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+a .pic {
+  width: 50px;
+  height: 50px;
+}
+
+.author-info {
+  background-color: var(--green);
+}
+
+.archive {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: archive;
+  margin-top: -1rem;
+  margin-left: 1rem;
+}
+
+.archive ul {
+  border-radius: 1rem;
+  background-color: var(--orange);
+  border: solid var(--deepgreen) 0.2rem;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.archive ul li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.archive ul li a {
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  color: var(--deepgreen);
+}
+
+.archive ul li a hr {
+  color: var(--deepgreen);
+}
+
+.archive ul li a:hover {
+  color: var(--yellow);
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: main;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(480px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 1rem;
+  margin-right: 1rem;
+}
+
+main .card {
+  background-color: var(--green);
+  border: solid 7px var(--orange);
+  border-radius: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition-property: border-color, -webkit-transform;
+  transition-property: border-color, -webkit-transform;
+  transition-property: border-color, transform;
+  transition-property: border-color, transform, -webkit-transform;
+  -webkit-transition-duration: .2s, .2s;
+          transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: ease-out, ease-out;
+          transition-timing-function: ease-out, ease-out;
+}
+
+main .card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  border-color: var(--brown);
+}
+
+main .card p {
+  padding: 0 .3rem;
+}
+
+main .card .card-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2 1fr);
+      grid-template-areas: "book info";
+  background-color: var(--deepgreen);
+  color: var(--orange);
+  font-family: courgette;
+}
+
+main .card .card-wrapper .book {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: book;
+  width: 300px;
+  max-height: 200px;
+}
+
+main .card .card-wrapper .book-info {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: info;
+  padding-left: 5px;
+  width: 150px;
+}
+
+main .card .card-wrapper .book-info .book-title {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+main .card .card-wrapper .book-info .author {
+  margin: 5px;
+}
+
+main .card .card-wrapper .book-info .genre {
+  margin: 5px;
+}
+
+main .card .card-wrapper .book-info .published {
+  margin: 5px;
+}
+
+footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: footer;
+  background-color: var(--deepgreen);
+}
+
+footer .footer-info {
+  color: var(--orange);
+  font-weight: 700;
+  padding-left: 5%;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+  main .card .card-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "book" "info";
+  }
+}
+
+@media (max-width: 785px) {
+  .container {
+    -ms-grid-columns: minmax(60px, 1fr);
+        grid-template-columns: minmax(60px, 1fr);
+        grid-template-areas: "header" "archive" "main" "footer";
+  }
+  .header {
+    -ms-grid-columns: minmax(60px, 1fr);
+        grid-template-columns: minmax(60px, 1fr);
+        grid-template-areas: "title" "description" "social";
+  }
+  .archive {
+    margin: 0 1rem;
+  }
+  .archive ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 5px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main {
+    margin: 0 1rem;
+  }
+}
+/*# sourceMappingURL=Riccio-Reads.css.map */
