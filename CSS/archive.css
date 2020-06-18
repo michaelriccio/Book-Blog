@@ -221,7 +221,7 @@ main {
   margin-right: 1rem;
 }
 
-main .card {
+main .card-archive {
   background-color: var(--green);
   border: solid 7px var(--orange);
   border-radius: 1rem;
@@ -234,43 +234,43 @@ main .card {
   transition-timing-function: ease-out, ease-out;
 }
 
-main .card:hover {
+main .card-archive:hover {
   transform: scale(1.02);
   border-color: var(--brown);
 }
 
-main .card p {
+main .card-archive p {
   padding: 0 .3rem;
 }
 
-main .card .card-wrapper {
+main .card-archive .card-archive-wrapper {
   background-color: var(--deepgreen);
   color: var(--orange);
   font-family: courgette;
 }
 
-main .card .card-wrapper .book {
+main .card-archive .card-archive-wrapper .book {
   width: 100%;
 }
 
-main .card .card-wrapper .book-info {
+main .card-archive .card-archive-wrapper .book-info {
   padding-left: 5px;
   width: 150px;
 }
 
-main .card .card-wrapper .book-info .book-title {
+main .card-archive .card-archive-wrapper .book-info .book-title {
   display: inline;
 }
 
-main .card .card-wrapper .book-info .author {
+main .card-archive .card-archive-wrapper .book-info .author {
   display: inline;
 }
 
-main .card .card-wrapper .book-info .genre {
+main .card-archive .card-archive-wrapper .book-info .genre {
   margin: 5px;
 }
 
-main .card .card-wrapper .book-info .published {
+main .card-archive .card-archive-wrapper .book-info .published {
   margin: 5px;
 }
 

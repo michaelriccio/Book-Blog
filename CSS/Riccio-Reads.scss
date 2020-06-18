@@ -36,6 +36,10 @@ body {
 	margin: 0;
 }
 
+figcaption{
+	margin-left: 5px;
+}
+
 /* Here's the main grid */
 .container {
 	display: grid;
@@ -171,10 +175,6 @@ a{
 		width: 50px;
 		height: 50px;
 	}
-}
-
-.author-info {
-	background-color: var(--green);
 }
 
 // rows 2-3

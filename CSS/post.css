@@ -41,163 +41,7 @@ body {
   grid-template-columns: repeat(6, minmax(60px, 1fr));
   grid-template-rows: auto 1fr auto;
   gap: 1rem;
-  grid-template-areas: "header header header header header header" "archive main  main   main   main   main" "archive main  main   main   main   main" "footer footer footer footer footer footer";
-}
-
-/* Header */
-.header {
-  color: var(--orange);
-  background-color: var(--deepgreen);
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "title social" "description social";
-}
-
-.header .title {
-  grid-area: title;
-  padding-left: 10%;
-  margin: 5%;
-  margin-bottom: 0;
-  font-size: 4rem;
-  font-weight: 700;
-  font-family: pacifico;
-  line-height: 1em;
-  color: var(--orange);
-  transition-property: color, transform;
-  transition-duration: .2s, .2s;
-  transition-timing-function: ease-out, ease-out;
-}
-
-.header .title:hover {
-  transform: scale(1.1);
-  color: var(--brown);
-}
-
-.header .description {
-  font-size: 1rem;
-  font-family: Montserrat;
-  font-weight: 900;
-  grid-area: description;
-  padding: 0 15%;
-  margin-top: 0;
-}
-
-.header .social-media {
-  grid-area: social;
-  background-color: var(--green);
-}
-
-.header .social-media .social {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  font-family: pacifico;
-}
-
-.header .social-media .social #profile {
-  margin-left: 1rem;
-  margin: .1rem;
-  width: 6rem;
-  border-radius: 4em;
-  border: solid var(--deepgreen) 0.3em;
-}
-
-.header .social-media .social .name {
-  font-size: 1.4rem;
-  color: var(--deepgreen);
-  font-weight: 600;
-  margin: 1rem;
-}
-
-.header .social-media .social .person {
-  color: var(--deepgreen);
-  font-family: montserrat;
-  max-width: 200px;
-}
-
-.header .social-media #media ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.header .social-media #media ul li {
-  font-size: 3rem;
-  margin: 0 3rem;
-}
-
-a .fa-facebook-square {
-  color: auto;
-  transition: color .3s ease-out;
-}
-
-a .fa-linkedin {
-  color: auto;
-  transition: color .3s ease-out;
-}
-
-a .fa-github-square {
-  color: auto;
-  transition: color .3s ease-out;
-}
-
-a .fa-envelope {
-  color: auto;
-  transition: color .3s ease-out;
-}
-
-a .fa-facebook-square:hover {
-  color: #3b5998;
-}
-
-a .fa-linkedin:hover {
-  color: #2867b2;
-}
-
-a .fa-github-square:hover {
-  color: #333;
-}
-
-a .fa-envelope:hover {
-  color: #ff8c00;
-}
-
-.author-info {
-  background-color: var(--green);
-}
-
-.archive {
-  grid-area: archive;
-  margin-top: -1rem;
-  margin-left: 1rem;
-}
-
-.archive ul {
-  border-radius: 1rem;
-  background-color: var(--orange);
-  border: solid var(--deepgreen) 0.2rem;
-  padding: 1rem;
-  font-weight: 700;
-}
-
-.archive ul li {
-  width: 100%;
-}
-
-.archive ul li a {
-  transition: color .3s ease-out;
-  color: var(--deepgreen);
-}
-
-.archive ul li a hr {
-  color: var(--deepgreen);
-}
-
-.archive ul li a:hover {
-  color: var(--yellow);
+  grid-template-areas: "header header header header header header"  "archive main  main   main   main   main" "....... main  main   main   main   main"  "footer footer footer footer footer footer";
 }
 
 .seperator {
@@ -219,7 +63,7 @@ main {
   margin-right: 1rem;
 }
 
-main .card {
+main .card-post {
   background-color: var(--green);
   border: solid 7px var(--orange);
   border-radius: 1rem;
@@ -229,38 +73,38 @@ main .card {
   max-width: 700px;
 }
 
-main .card p {
+main .card-post p {
   padding: 0 .3rem;
 }
 
-main .card .card-wrapper {
+main .card-post .card-post-wrapper {
   background-color: var(--deepgreen);
   color: var(--orange);
   font-family: courgette;
 }
 
-main .card .card-wrapper .book {
+main .card-post .card-post-wrapper .book-post {
   width: 100%;
 }
 
-main .card .card-wrapper .book-info {
+main .card-post .card-post-wrapper .book-post-info {
   padding-left: 5px;
   width: 150px;
 }
 
-main .card .card-wrapper .book-info .book-title {
+main .card-post .card-post-wrapper .book-post-info .book-post-title {
   display: inline;
 }
 
-main .card .card-wrapper .book-info .author {
+main .card-post .card-post-wrapper .book-post-info .author {
   display: inline;
 }
 
-main .card .card-wrapper .book-info .genre {
+main .card-post .card-post-wrapper .book-post-info .genre {
   margin: 5px;
 }
 
-main .card .card-wrapper .book-info .published {
+main .card-post .card-post-wrapper .book-post-info .published {
   margin: 5px;
 }
 

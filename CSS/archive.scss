@@ -203,7 +203,7 @@ main {
 	grid-template-columns: 1fr;
 	gap: 1rem;
 	margin-right: 1rem;
-	.card {
+	.card-archive {
 		background-color: var(--green);
 		border: solid 7px var(--orange);
 		border-radius: 1rem;
@@ -221,7 +221,7 @@ main {
 		p {
 			padding: 0 .3rem;
 		}
-		.card-wrapper {
+		.card-archive-wrapper {
 			background-color: var(--deepgreen);
 			color: var(--orange);
 			font-family: courgette;
