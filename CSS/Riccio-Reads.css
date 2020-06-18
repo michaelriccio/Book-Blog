@@ -1,3 +1,7 @@
+@import "archive.css";
+@import "post.css";
+@import "mq.css";
+
 /* HEX */
 html {
   --brown: #99621eff;
